@@ -1,0 +1,16 @@
+.athenaTitle {
+    font-family: Verdana;
+    font-size: 1.7rem !important;
+
+}
+
+.small_caps {
+    font-variant: small-caps;
+
+}
+
+.description {
+    text-transform: none !important;
+    font-family: Verdana;
+
+}

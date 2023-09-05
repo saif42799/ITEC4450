@@ -11,7 +11,7 @@
         <h1>Bob's Auto Parts</h1>
         <h2>Order Form</h2>
     </div>
-    <form action="ProcessOrder.php" method="get">
+    <form action="ProcessOrder.php" method="post">
         <table class="w3-table w3-table-all">
             <tr class="w3-blue-gray">
                 <th>Item</th>
@@ -20,19 +20,19 @@
             <tr>
                 <td>Tires</td>
                 <td>
-                    <input type="text" name="oilqty" size="3" maxlength="3">
+                    <input type="text" name="oilqty" size="3" maxlength="3"/>
                 </td>
             </tr>
             <tr>
                 <td>Oil</td>
                 <td>
-                    <input type="text" name="tireqty" size="3" maxlength="3">
+                    <input type="text" name="tireqty" size="3" maxlength="3"/>
                 </td>
             </tr>
             <tr>
                 <td>Spark Plugs</td>
                 <td>
-                    <input type="text" name="sparkqty" size="3" maxlength="3">
+                    <input type="text" name="sparkqty" size="3" maxlength="3"/>
                 </td>
             </tr>
             <tr>
@@ -49,7 +49,7 @@
                 </td>
             </tr>
         </table>
-        <input type="submit" value="Submit Order">
+        <input type="submit" value="Submit Order"/>
     </form>
 
     

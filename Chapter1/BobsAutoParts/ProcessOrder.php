@@ -4,7 +4,8 @@
     $oilqty = $_POST['oilqty'];
     $sparkqty = $_POST['sparkqty'];
     $sourceIndex = $_POST['find'];
-    $sourceArray = $_POST['Regualr customer, TV advertising, Phone directory, Word of mouth, Social media, Search engine'];
+    $sourceArray = $_POST['Regular customer, TV advertising, Phone directory, 
+                           Word of mouth, Social media, Search engine'];
     
 
 ?>
@@ -53,7 +54,7 @@
             $totalAmount = 0.0;
             define('TIRE_PRICE', 100);
             define('OIL_PRICE', 10);
-            define('SPARK_PRICE' 4);
+            define('SPARK_PRICE', 4);
 
             $totalAmount = $tireqty * TIRE_PRICE +
                            $oilqty * OIL_PRICE +

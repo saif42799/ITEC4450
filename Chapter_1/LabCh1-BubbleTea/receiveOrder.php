@@ -16,25 +16,25 @@
 </head>
 <body>
     <div class="w3-container">
-        <header class="w3-display-container w3-theme-14 w3-center">
+        <header class="w3-display-container w3-theme-l4 w3-center">
             <h1 class="w3-text-red"><b>Red Dragon</b></h1>
             <h2>Bubble Tea</h2>
             <div class="w3-display-topright">
-                <img src="BubbleTea.png" alt="" style="width: 15%;">
+                <img src="BubbleTea.png" alt="" style="width: 15%">
             </div>
         </header>
 
     <div class="w3-container w3-sand">
-        <h2>Order recived!!!!</h2><br>
+        <h2>Order recived!</h2><br>
 
         <?php
         $size = $_POST['size'];
-        $addON = $_POST['addON'];
+        $addOn = $_POST['addOn'];
         $flavor = $_POST['flavor'];
         $total = 0;
 
         echo "<b>Size</b>: $size<br>";
-        echo "<b>Add</b>: $addOn<br>";
+        echo "<b>Add on</b>: $addOn<br>";
         echo "<b>Flavor</b>: $flavor<br>"; 
 
         switch($size){
@@ -49,7 +49,7 @@
      
         }
 
-        echo "<hr><b>Your total is: <b>$total</b></b>"
+        echo "<hr><b>Your total is: $<b>$total</b></b>"
         ?>
         
 

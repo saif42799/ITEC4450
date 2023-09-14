@@ -16,7 +16,7 @@
 </head>
 <body>
     <div class="w3-container">
-        <header class="w3-display-container w3-theme-14 w3-center">
+        <header class="w3-display-container w3-theme-l4 w3-center">
             <h1 class="w3-text-red"><b>Red Dragon</b></h1>
             <h2>Bubble Tea</h2>
             <div class="w3-display-topright">
@@ -49,7 +49,7 @@
                 <option value="Taro">Taro</option>
 
             </select><br>
-            <input type="submit" name="submit">
+            <input type="submit" name="Submit">
 
         </form><br>
         <div class="w3-container">
@@ -64,17 +64,17 @@
                 </tr>
                 <tr class="w3-theme-l5">
                     <th>Medium</th>
-                    <th>$5.00</th>
+                    <th>$4.50</th>
                 </tr>
-                <tr class="w3-theme-li">
+                <tr class="w3-theme-l5">
                     <th>Large</th>
                     <th>$5.00</th>
                 </tr>
-                <tr class="w3-theme-li">
+                <tr class="w3-theme-l4">
                     <th>Lychee</th>
                     <th>$0.50</th>
                 </tr>
-                <tr class="w3-theme-li">
+                <tr class="w3-theme-l4">
                     <th>Tapioca Pearls</th>
                     <th>$0.50</th>
                 </tr>

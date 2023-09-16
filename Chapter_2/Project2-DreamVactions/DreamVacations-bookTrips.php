@@ -15,12 +15,12 @@
 </head>
 <body>
     <div class="w3-container w3-sand">
-        <header class="w3-display-container w3-green" style="height: 130px;">
+        <header class="w3-display-container w3-green" style="height: 130px">
             <div class="w3-display-topright">
                 <img src="planeSmall.png" alt="">
             </div>
 
-            <div class="w3-display-topmiddle" style="text-align: center;">
+            <div class="w3-display-topmiddle" style="text-align:center">
                 <h1>Dream Vacation</h1>
                 <h2>Trip Booking</h2>
 
@@ -83,7 +83,7 @@
                     $lName = $_POST['$lName'];
                     $destination = $_POST['$destination'];
                     $numberOfPassengers = $_POST['numberOfPassengers'];
-                    $dataForm = $_POST['dataForm'];
+                    $dateFrom = $_POST['dateFrom'];
                     $dateTo = $_POST['dateTo'];
 
                     echo "<h3>Booking Successfull!!!</h3>";
@@ -107,7 +107,8 @@
                     @$fp = fopen($fileName, 'a');
 
                     if(!$fp) {
-                        echo "Your order could not be processed at this time. Please try again later.";
+                        echo "Your order could not be processed at this time. Please try again later";
+
                         exit;
                     }
 

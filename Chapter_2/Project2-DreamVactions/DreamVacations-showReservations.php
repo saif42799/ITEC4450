@@ -15,12 +15,12 @@
 </head>
 <body>
     <div class="w3-container w3-sand">
-        <header class="w3-display-container w3-green" style="height: 130px;">
+        <header class="w3-display-container w3-green" style="height: 130px">
             <div class="w3-display-topright">
-                <img src="planeSmall.png" alt="">
+                <img src="planeSmall.png" alt="Plane Small">
             </div>
 
-            <div class="w3-display-topmiddle" style="text-align: center;">
+            <div class="w3-display-topmiddle" style="text-align: center">
                 <h1>Dream Vacation</h1>
                 <h2>Reservation List</h2>
 
@@ -37,7 +37,7 @@
             <?php
                 $myFile = fopen('bookings.csv', 'r') or die('Unable to open file!');
 
-                $outTable = "<table class='w3-table we-striped w3-border'>";
+                $outTable = "<table class='w3-table w3-striped w3-border'>";
                 $outTable .= "<tr class='w3-teal'>";
                 $outTable .= "  <th>Date</th>";
                 $outTable .= "  <th>First Name</th>";

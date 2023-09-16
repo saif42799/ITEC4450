@@ -37,7 +37,7 @@
             <?php
                 $myFile = fopen('bookings.csv', 'r') or die('Unable to open file!');
 
-                $outTable = "<table class='w3-table we-stripped w3-vorder'>";
+                $outTable = "<table class='w3-table we-striped w3-border'>";
                 $outTable .= "<tr class='w3-teal'>";
                 $outTable .= "  <th>Date</th>";
                 $outTable .= "  <th>First Name</th>";

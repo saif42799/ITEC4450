@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Dream vacation Booking</title>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <style>
         h1, h2{
@@ -39,7 +39,7 @@
             <input type="text" class="w3-input" name="lName"> 
 
             <label>Destination</label>
-            <select class="w3-select" name="destination"> 
+            <select name="destination" class="w3-select" > 
                 <option value="PEK">Beijing-PEK</option>
                 <option value="CAI">Cairo-CAI</option>
                 <option value="JFK">New York-JFK</option>
@@ -69,7 +69,7 @@
         <div class="w3-container">
             <?php
                 if(isset($_POST['submit'])) {
-                    if(!empty($_POST['fName']) || !empty($_POST['lName'])) {
+                    if(empty($_POST['fName']) || empty($_POST['lName'])) {
                         echo "Plaese enter all the required infromation and try again";
                         exit;
                     }
@@ -82,7 +82,7 @@
                     $fName = $_POST['$fName'];
                     $lName = $_POST['$lName'];
                     $destination = $_POST['$destination'];
-                    $numPassengers = $_POST['numPassengers'];
+                    $numberOfPassengers = $_POST['numberOfPassengers'];
                     $dataForm = $_POST['dataForm'];
                     $dateTo = $_POST['dateTo'];
 
@@ -90,19 +90,20 @@
                     echo "<b>First Name</b>: $fName<br>";
                     echo "<b>Last Name</b>: $lName<br>";
                     echo "<b>Destination</b>: ".$allDestinations[$destination]."($destination)<br>";
-                    echo "<b>Number of passengers</b>: $numPassengers<br>";
+                    echo "<b>Number of passengers</b>: $numberOfPassengers<br>";
                     echo "<b>Date from</b>: $dateFrom<br>";
                     echo "<b>Date to</b>: $dateTo<br>";
 
                     # Write to file
+                    $outputStr = date("Y-m-d H:i:s").","; // booking
                     $outputStr .= $fName.',';
                     $outputStr .= $lName.',';
                     $outputStr .= $destination.',';
-                    $outputStr .= $numPassengers.',';
+                    $outputStr .= $numberOfPassengers.',';
                     $outputStr .= $dateFrom.',';
                     $outputStr .= $dateTo.PHP_EOL;
 
-                    $fileName = 'booking.csv';
+                    $fileName = 'bookings.csv';
                     @$fp = fopen($fileName, 'a');
 
                     if(!$fp) {
@@ -116,7 +117,7 @@
                     # write data line ot file
                     fwrite($fp, $outputStr, strlen($outputStr));
 
-                    #
+                    # unlock the file after writing
                     flock($fp, LOCK_UN);                   
 
                 }

@@ -79,9 +79,9 @@
                         'CDG' => 'Paris', 'NRT' => 'Tokyo', 'GIG' => 'Rio de Janeiro'
                     );
 
-                    $fName = $_POST['$fName'];
-                    $lName = $_POST['$lName'];
-                    $destination = $_POST['$destination'];
+                    $fName = $_POST['fName'];
+                    $lName = $_POST['lName'];
+                    $destination = $_POST['destination'];
                     $numberOfPassengers = $_POST['numberOfPassengers'];
                     $dateFrom = $_POST['dateFrom'];
                     $dateTo = $_POST['dateTo'];

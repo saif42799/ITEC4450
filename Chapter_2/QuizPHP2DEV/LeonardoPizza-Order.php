@@ -88,7 +88,7 @@
                     $outputStr .= $lName.',';
                     $outputStr .= $pizzaName.',';
                     $outputStr .= $pizzaSize.',';
-                    $outputStr .= $total;
+                    $outputStr .= $total.PHP_EOL;
                  
 
                     $fileName = 'pizzaOrder.csv';

@@ -27,8 +27,8 @@
             </div>
         </header>
         <nav class="w3-bar w3-border w3-light-grey">
-            <a href="DreamVations-bookTrips.php" class="w3-bar-item w3-button">Booking</a>
-            <a href="DreamVations-showReservation.php" class="w3-bar-item w3-button">Show Reservation</a>
+            <a href="DreamVacations-bookTrips.php" class="w3-bar-item w3-button">Booking</a>
+            <a href="DreamVacations-showReservations.php" class="w3-bar-item w3-button">Show Reservation</a>
         </nav>
 
         <form action="DreamVacations-bookTrips.php" class="w3-container" method="POST">
@@ -44,7 +44,7 @@
                 <option value="CAI">Cairo-CAI</option>
                 <option value="JFK">New York-JFK</option>
                 <option value="CDG">Paris-CDG</option>
-                <option value="NRT">Tokyo</option>
+                <option value="NRT">Tokyo-NRT</option>
                 <option value="GIG">Rio de Janeiro-GIG</option>
             </select>
 

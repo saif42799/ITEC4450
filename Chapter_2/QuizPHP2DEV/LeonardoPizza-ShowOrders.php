@@ -38,6 +38,7 @@
                 $outTable .= "  <th>Last Name</th>";
                 $outTable .= "  <th>Pizza Name</th>";
                 $outTable .= "  <th>Pizza Size</th>";
+                $outTable .= "  <th>Total</th>";
                 $outTable .= "</tr>";
 
                 # loop through all reservation rows

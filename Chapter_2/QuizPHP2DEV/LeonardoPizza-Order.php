@@ -74,6 +74,11 @@
                         case "large" : $total += 10; break;
                     }
 
+                    switch($pizzaName){
+                        case "hawaiin" : $total += 0.5; break;
+                        case "sausage" : $total += 0.5; break;
+                    }
+
                     echo "<h3>Order Successfull!!!</h3>";
                     echo date("Y-m-d H:i:s")."<br>";
                     echo "<b>First Name</b>: $fName<br>";

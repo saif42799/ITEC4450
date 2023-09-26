@@ -56,9 +56,9 @@
 
         echo "<h2>Associative Arrays</h2>";
         #
-        $age = array('Heather' => 20, 'Clariassa' => 21, 'Ken' => 19, 'Macus' => 18);
+        $age = array('Heather' => 20, 'Clariassa' => 21, 'Ken' => 19, 'Marcus' => 18);
         echo "Heather: ".$age['Heather']."<br>";
-        echo "Clarissa: ".$age['Clarissa']."<br>";
+        echo "Clarissa: ".$age['Clariassa']."<br>";
         echo "Ken: ".$age['Ken']."<br>";
         echo "Marcus: ".$age['Marcus']."<br>";
 
@@ -76,82 +76,23 @@
 
 
         echo "<h2>Multidimensional Arrays</h2>";
-        $countries = [['United Sates'], ['Canada'], ['Mexicao'],
-                      ['Hondures'], ['Guatemal'], ['Costa Rica'], ['Belize'], ['El Salvador'],
-                      ['Jamaica'], ['Dominican Republic'], ['Haiti'], ['Puerto Rica'], ['Cuba'],
-                      ['Venezuela'], ['Colombia'], ['Aregentina'], ['Chile'], ['Brazil'], ['Paru'],
-                      ['Uraguay'], ['FRench Guiana'], ['Suriname'], ['Paraguay']];
+        $countries = [['a','b','c'],['p','q','r'],['x','y','z']];
 
         echo "<h3>Accessing Individual Elements</h3>";
-        echo "[0][1]: ".$countries[0][1]."<br>";
+        echo "[2][1]: ".$countries[2][1]."<br>";
         echo "[1][4]: ".$countries[1][4]."<br>";
-
-        echo "<h3></h3>"
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    ?>
-    ?>
-
+        $numbers = range(20, 30);
+        echo $numbers."<br>";
+        echo "<h3>Looping with a foreach</h3>";
+        
+        foreach($countries as $keyRow => $valueList) {
+            foreach($valueList as $keyCol => $value)
+                echo "[$keyRow] [$keyCol] = $value";
+
+            # display line break after each row 
+            echo "<br>";
+
+        }
 
     ?>
 

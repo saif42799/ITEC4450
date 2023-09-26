@@ -21,13 +21,13 @@
     <div class="w3-container w3-center w3-pink">
         <h1>CLementine Bakery</h1>
         <h2>View Orders</h2>
-        <img src="ChocolateCake.png" width="20%" height="10%" class="w3-display-topleft"> 
+        <img src="ChocolateCake.png" width="10%" height="10%" class="w3-display-topleft"> 
 
-        <img src="Croissant_PNG_Clip_Art-2216.png" width="20%" height="10%" class="w3-display-topright"> 
+        <img src="Croissant_PNG_Clip_Art-2216.png" width="10%" height="10%" class="w3-display-topright"> 
 
     </div>
     
-    <?php include "menu.php"?>
+    <?php include "menu.php";?>
 
     <div class="w3-container w3-light-grey">
         <?php
@@ -48,11 +48,11 @@
                 echo "      <th>Quantity</th>";
                 echo "      <th>Total</th>";
                 echo "  </tr>";
-                echo "</table>";
-            }
+                
+            
 
             # Loop through each row 
-            for($i = 0; $i < $ $number_of_orders; $i++){
+            for($i = 0; $i < $number_of_orders; $i++) {
                 // retrieve current row (current order) from mutli-dim array 
                 $curOrder = explode(';', $orders[$i]);
 
@@ -65,6 +65,8 @@
                 # end table row 
                 echo "</td>";
 
+            }
+            echo "</table>";
             }
 
 

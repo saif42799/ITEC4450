@@ -30,19 +30,19 @@
 </head>
 <body>
     <div class="w3-container w3-center w3-pink">
-        <h1>CLementine Bakery</h1>
+        <h1>Clementine Bakery</h1>
         <h2>Order Form</h2>
-        <img src="ChocolateCake.png" width="20%" height="10%" class="w3-display-topleft"> 
+        <img src="ChocolateCake.png" width="10%" height="10%" class="w3-display-topleft"> 
 
-        <img src="Croissant_PNG_Clip_Art-2216.png" width="20%" height="10%" class="w3-display-topright"> 
+        <img src="Croissant_PNG_Clip_Art-2216.png" width="10%" height="10%" class="w3-display-topright"> 
 
     </div>
     
-    <?php include "menu.php"?>
+    <?php include "menu.php"; ?>
 
     <form action="ProcessOrder.php" method="POST">
         <label>Select Product</label>
-        <select name="product" class="w3-selsct">
+        <select name="product" class="w3-select">
             <?php
                 foreach($productArray as $key => $value)    
                     echo "<option value='$key'> $value[0]</option><br>";          
@@ -51,11 +51,11 @@
         </select>
 
         <label>Enter quantity</label>
-        <input type="text" class="w3-input" name="quantity" size="3" maxlength="3">
-        <input type="submit" value="Submit order">
+        <input class="w3-input" type="text" name="quantity" size="3" maxlength="3">
+        <input type="submit" value="Submit order"/>
     </form>
 
-    <div>
+    <div class="w3-container">
         <table class="w3-table w3-table-all">
             <tr class="w3-blue-grey">
                 <th>Item code</th>
@@ -64,18 +64,18 @@
 
             </tr>
 
-        </table>
+            <?php
+                # create rows
+                foreach($productArray as $key => $value) {
+                    echo "<tr>";
+                    echo "<td>$key</td>";
+                    echo "<td>$value[0]</td>";
+                    echo "<td>$".number_format($value[1],2)."</td>";
+                    echo "</tr>";
+                }
+            ?>
 
-        <?php
-            # create rows
-            foreach($productArray as $key => $value) {
-                echo "<tr>";
-                echo "  <td>$key</td>";
-                echo "  <td>$value[0]</td>";
-                echo "  <td>".number_format($value[1],2)."</td>";
-                echo "</tr>";
-            }
-        ?>
+        </table>    
     </div>
 
 </body>

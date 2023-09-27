@@ -8,8 +8,14 @@
       5 => ['Taco al pastor', 9.50]        
   ];
 
-  // create short variable names
-  # write your code here
+ 
+    #create short variable names 
+    $productIndex = (int) $_POST['product'];
+    $productSelected = $productArray[$productIndex];
+    $productName = $productSelected[0];
+    $productPrice = $productSelected[1];
+    $quantity = (int) $_POST['quantity'];
+    $date = date('d/m/Y h:i:s');
 ?>
 <!DOCTYPE html>
 <html>
@@ -42,7 +48,37 @@
     
     <div class="w3-container w3-theme-l2">
     <?php
-		# write your code here
+		      if($quantity < 0) {
+              echo "You did not order anuything in the previous page!<br";
+              exit;
+           }
+          
+          echo "Order processed at $date<br>";
+          echo "Your order is as follws: <br>";
+          echo "Item Ordered: $productName<br>";
+          echo "Quantity: $quantity<br>";
+          echo "Unit price: $productPrice<br>";
+  
+          $totalAmount = $quantity * $productPrice;
+  
+          echo "Total: $".number_format($totalAmount, 2)."<br>";
+  
+          $outputstring = $date.";".$productName.";".$quantity.";".$totalAmount."\n"; 
+              
+          # open file for appending 
+          @$fp = fopen("orders.txt", 'ab');
+  
+          if(!$fp) {
+            echo "Your order cannot be processed at this time. Please try again later<br>";
+            exit;
+          }
+  
+          flock($fp, LOCK_EX);
+          fwrite($fp, $outputstring, strlen($outputstring));
+          flock($fp, LOCK_UN);
+          fclose($fp);
+          
+          echo "Order written<br>";
     ?>
     </div>
     <br><br>

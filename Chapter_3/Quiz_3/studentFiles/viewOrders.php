@@ -46,7 +46,7 @@ $document_root = $_SERVER['DOCUMENT_ROOT'];
     } else {
       # display orders
       echo "<table class='w3-table w3-striped w3-border'>";
-      echo "  <tr class='w3-blue-gray'>";
+      echo "  <tr class='w3-theme-d5'>";
       echo "      <th>Datetime</th>";
       echo "      <th>Product</th>";
       echo "      <th>Quantity</th>";

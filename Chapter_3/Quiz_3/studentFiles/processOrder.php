@@ -11,7 +11,7 @@
  
     #create short variable names 
     $productIndex = (int) $_POST['product'];
-    $productSelected = $productArray[$productIndex];
+    $productSelected = $productsArray[$productIndex];
     $productName = $productSelected[0];
     $productPrice = $productSelected[1];
     $quantity = (int) $_POST['quantity'];
@@ -62,7 +62,8 @@
           $totalAmount = $quantity * $productPrice;
   
           echo "Total: $".number_format($totalAmount, 2)."<br>";
-  
+          echo "<br>";
+          
           $outputstring = $date.";".$productName.";".$quantity.";".$totalAmount."\n"; 
               
           # open file for appending 

@@ -30,26 +30,25 @@
     <?php include "menu.php";?>
 
     <div class="w3-container w3-light-grey">
-        <?php
-            $filename = "orders.txt";
-            $orders = file($filename);
+    <?php
+        $filename = "orders.txt";
+        $orders = file($filename);
 
-            $number_of_orders = count($orders);
+        $number_of_orders = count($orders);
 
-            if($number_of_orders < 1) {
-                echo "No orders pending. Please try again later<br>";
+        if($number_of_orders < 1) {
+            echo "<p><strong>No orders pending.<br/>
+            Please try again later.</strong></p>";
 
-            } else {
-                # display orders
-                echo "<table class='w3-table w3-striped w3-border'>";
-                echo "  <tr class='w3-blue-grey'>";
-                echo "      <th>Datetime</th>";
-                echo "      <th>Product</th>";
-                echo "      <th>Quantity</th>";
-                echo "      <th>Total</th>";
-                echo "  </tr>";
-                
-            
+        } else {
+            # display orders
+            echo "<table class='w3-table w3-striped w3-border'>";
+            echo "  <tr class='w3-blue-grey'>";
+            echo "      <th>Datetime</th>";
+            echo "      <th>Product</th>";
+            echo "      <th>Quantity</th>";
+            echo "      <th>Total</th>";
+            echo "  </tr>";     
 
             # Loop through each row 
             for($i = 0; $i < $number_of_orders; $i++) {
@@ -60,7 +59,7 @@
                 echo "<tr>";
 
                 for($j = 0; $j < count($curOrder); $j++) 
-                echo "<td>".$curOrder[$j]."</td><br>";
+                echo "<td>".$curOrder[$j]."</td>";
 
                 # end table row 
                 echo "</td>";
@@ -70,7 +69,7 @@
             }
 
 
-        ?>
+    ?>
     </div>
 
 

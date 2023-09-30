@@ -22,6 +22,7 @@
         <?php
             $path = "orders/";
             @$fp = fopen($path."orders.txt", 'rb');
+            
 
             if(!$fp) {
                 echo "<br>No orders pending. Please try again later";

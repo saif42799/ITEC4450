@@ -9,7 +9,6 @@ function addJs($text) {
 
 }
 
-
 ?>
 
 <script>

@@ -2,10 +2,10 @@
 
 // 86400 seconds in a day
 $seconds_in_a_day = 60*60*24;
-setcookie("favColor","green", time() + 30*$seconds_in_a_day,"/"); // 30 days
-setcookie("favAnimalr","horse", time() + $seconds_in_a_day,"/"); // 1 day
-setcookie("favSchool","GGC", time() + 60*60,"/"); // 1 hour
-setcookie("favTeam","Atlanta Falcons", time() + 60,"/"); // 1 minute
+setcookie("favColor", "green", time() + 30*$seconds_in_a_day,"/"); // 30 days
+setcookie("favAnimalr", "horse", time() + $seconds_in_a_day,"/"); // 1 day
+setcookie("favSchool", "GGC", time() + 60*60,"/"); // 1 hour
+setcookie("favTeam", "Atlanta Falcons", time() + 60,"/"); // 1 minute
 
 
 ?>
@@ -36,7 +36,7 @@ setcookie("favTeam","Atlanta Falcons", time() + 60,"/"); // 1 minute
             echo"Cookies names favColor is not set!<br>";
         }else{
             echo "Cookie favColor set!<br>";
-            echo"Value is: ".$_COOKIE['favSchool']."<br><br>";
+            echo"Value is: ".$_COOKIE['favColor']."<br><br>";
         }
 
         if(isset($_COOKIE['favAnimal'])) {

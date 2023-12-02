@@ -16,7 +16,7 @@ session_start();
 <body class="w3-theme-l5">
     <div class="w3-container w3-theme-l1 w3-center">
         <h1>Session Example</h1>
-        <h2>Destroy Session</h2>
+        <h2>Destroy </h2>
 
     </div>
 

@@ -1,4 +1,11 @@
 <div class="w3-container">
+<div class="w3-dropdown-hover">
+    <button class="w3-button w3-black">Main</button>
+    <div class="w3-dropdown-content w3-bar-block w3-border">
+      <a href="index.php" class="w3-bar-item w3-button">Main Menu</a>
+    </div>
+  </div>
+
   <div class="w3-dropdown-hover">
     <button class="w3-button w3-black">Customer</button>
     <div class="w3-dropdown-content w3-bar-block w3-border">

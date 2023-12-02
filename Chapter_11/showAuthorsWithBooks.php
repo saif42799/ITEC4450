@@ -8,7 +8,7 @@ include "utilFunctions.php";
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bookstore - Show Author</title>
+    <title>Bookstore - Show Authors</title>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -16,7 +16,7 @@ include "utilFunctions.php";
     <div class="container w3-blue-grey">
         <header class="container w3-center">
             <h1>Bookstore</h1>
-            <h2>Veiw All Author</h2>
+            <h2>Veiw Author With Books</h2>
 
         </header>
 
@@ -29,9 +29,10 @@ include "utilFunctions.php";
         <?php
             include 'connectDatabase.php';
 
-            $sql = "SELECT * ";
-            $sql = "FROM author ";
-            $sql = "ORDER BY lastName, firstName";
+            $sql = "SELECT a.*, count(*) as 'totalBooks' ";
+            $sql = "FROM book_author bo INNER JOIN author a on bo.author_id = a.author_id";
+            $sql = "GROUP BY a.author_id";
+            $sql = "ORDER BY a.lastName, a.firstName";
 
             $result = $conn->query($sql);
 
@@ -41,6 +42,7 @@ include "utilFunctions.php";
                 echo "       <th>ID</th>";
                 echo "       <th>First Name</th>";
                 echo "       <th>Last Name</th>";
+                echo "       <th>Total Books</th>";
                 echo "   </tr>";
 
                 while ($row = $result->fetch_assoc()) { 
@@ -48,11 +50,11 @@ include "utilFunctions.php";
                     echo "  <td>".$row['author_id']."</td>";
                     echo "  <td>".$row['firstName']."</td>";
                     echo "  <td>".$row['lastName']."</td>";
+                    echo "  <td>".$row['totalBooks']."</td>";
                     echo "</tr>";
 
                }
                
-
                echo "</table>";
 
             }

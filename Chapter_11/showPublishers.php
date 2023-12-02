@@ -8,7 +8,7 @@ include "utilFunctions.php";
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bookstore - Show Author</title>
+    <title>Bookstore - Show Publishers</title>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -16,7 +16,7 @@ include "utilFunctions.php";
     <div class="container w3-blue-grey">
         <header class="container w3-center">
             <h1>Bookstore</h1>
-            <h2>Veiw All Author</h2>
+            <h2>Show Publishers</h2>
 
         </header>
 
@@ -29,25 +29,25 @@ include "utilFunctions.php";
         <?php
             include 'connectDatabase.php';
 
-            $sql = "SELECT * ";
-            $sql = "FROM author ";
-            $sql = "ORDER BY lastName, firstName";
-
+            $sql = "SELECT * FROM publisher";
+    
             $result = $conn->query($sql);
 
             if ($result->num_rows > 0) {
                 echo "<table class='w3-table w3-striped'>";
                 echo "   <tr class='w3-teal'>";
                 echo "       <th>ID</th>";
-                echo "       <th>First Name</th>";
-                echo "       <th>Last Name</th>";
+                echo "       <th>Name</th>";
+                echo "       <th>Email</th>";
+                echo "       <th>Phone</th>";
                 echo "   </tr>";
 
                 while ($row = $result->fetch_assoc()) { 
                     echo "<tr>";
-                    echo "  <td>".$row['author_id']."</td>";
-                    echo "  <td>".$row['firstName']."</td>";
-                    echo "  <td>".$row['lastName']."</td>";
+                    echo "  <td>".$row['publisher_id']."</td>";
+                    echo "  <td>".$row['name']."</td>";
+                    echo "  <td>".$row['email']."</td>";
+                    echo "  <td>".$row['phoneNumber']."</td>";
                     echo "</tr>";
 
                }
